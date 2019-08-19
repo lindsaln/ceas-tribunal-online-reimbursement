@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A form to allow students and alumni get tickets to a yearly CEAS Tribunal event called Luau.">
+    <title>Luau Tickets</title>
+
+    <link rel="stylesheet" type="text/css" href="build/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+</head>
+<body>
+    <div class="intro">
+        <header>
+            <a href="https://tribunal.uc.edu"><img src="./images/tribunal_logo.png" alt="Tribunal logo"></a>
+        </header>
+
+        <div class="container reservation-form">
+            <div class="title">
+                <h1>Luau Tickets</h1>
+            </div>
+            <p class="intro-info"></p>
+            <form>
+                <input type="text" id="name" placeholder="Name" autocomplete="off">
+                <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number (xxx-xxx-xxxx)" autocomplete="off">
+                <input type="text" id="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="text" id="birth-date" name="birth-date" placeholder="Date of Birth (mm/dd/yyyy)" autocomplete="off">
+                <label for="venmo-image">Venmo Transaction Image</label>
+                <p>The ticket will have to be paid through Venmo to confirm your place. Make a payment to @<span class="venmo-recipient"></span>
+                    with the amount $<span class="ticket-price"></span> and include "Luau Ticket" as the title.
+                    Then, attach a screenshot of your completed transaction as a proof of payment.
+                </p>
+                <a class="open-venmo">Open Venmo</a>
+                <label class="file-upload">
+                    <input type="file" id="venmo-image" name="venmo-image" accept="image/png, image/jpeg">
+                    <div class="file-text-venmo"><i class="fas fa-file-upload"></i> <span>Click to Upload</span></div>
+                </label>
+                <label for="download">Completed Bus Waiver</label>
+                <a class="download" href="./documents/BusWaiver.docx">Download Bus Waiver</a>
+                <label class="file-upload">
+                    <input type="file" id="bus-waiver" name="bus-waiver" accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, image/png, image/jpeg">
+                    <div class="file-text-wavier"><i class="fas fa-file-upload"></i> <span>Click to Upload</span></div>
+                </label>
+                <input type="button" value="Submit" id="submit-button">
+                <div class="loader lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </form>
+        </div>
+
+        <div class="container reserved-ticket">
+            <div class="reserved-box">
+                <p class="success-emoji">🎉</p>
+                <p>We have sent you an email to <span class="reserved-email"></span> confirming your reservation.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>University of Cincinnati | © 2019 College of Engineering and Applied Science Tribunal </p>
+        <p>For any questions or comments, contact us at uc.eas.tribunal@gmail.com.</p>      
+    </footer>
+
+    <script src="build/main.min.js"></script>
+</body>
+</html>
